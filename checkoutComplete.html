@@ -1,0 +1,148 @@
+<!Doctype html> 
+<html lang = "en">
+    <head>
+        <title>Checkout Complete</title>
+        <meta charset = "utf-8">
+        <meta name = "description"  content = "Thank You For Your Order">
+        <meta name = "viewport"     content = "width = device-width, initial-scale = 1.0">
+        <link rel="icon" type="image/png" href="images/logo_icon.png"/>
+        <link rel = "stylesheet" href = "css/css/bootstrap.css">
+        <link rel = "stylesheet" href = "styles/checkout.css">
+        <link rel="stylesheet"   href="font-awesome/css/all.min.css"/>
+        <link rel="stylesheet" href="styles/main.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="scripts/checkoutComplete.js"></script>
+    </head>
+    <body style="background-color:#fff8bca9;">
+        <!-- Header -->
+<!-- Header -->
+<header class="pb-4" id="header" style="background-color:#ffcbd37a">
+<!-- Top Banner -->
+        <div width="100%" style="top:0px; background-color:#371e17e4; height: 28px; overflow:hidden;">
+            <a href="address.html" target="_blank" 
+                style="vertical-align: top; margin: 25px; color: #d9d4a6; text-decoration: none; overflow:hidden;
+                padding-left:24.5%;">
+                <i class="fas fa-map-marked-alt fa-lg" style="text-overflow:clip;"></i> 
+                &nbsp;132 Avenue St Louis, Beaconsfield, QC
+            </a>
+            <a href="https://www.facebook.com/TissyBistro/" target="_blank" 
+                style="vertical-align: top; margin: 25px; color: #d9d4a6; text-decoration: none; overflow:hidden;">
+                <i class="fab fa-facebook-square fa-lg" style="overflow:hidden;"></i> 
+                &nbsp;@TissyBistro 
+             </a>  
+             <a href="#header"
+                style="vertical-align: top; margin: 25px; color: #d9d4a6; text-decoration: none; overflow:hidden;">
+                <i class="fas fa-phone" style="overflow:hidden;"></i> 
+                &nbsp;438-725-5512
+             </a>   
+             <a href="#header"
+                style="vertical-align: top; margin: 25px; color: #d9d4a6; text-decoration: none; overflow:hidden;">
+                <i class="fas fa-clock"></i>
+                &nbsp;Opening Hours: 11:00 AM ~ 6:00 PM
+             </a>   
+        </div>
+            <a href="fr/menu.html" 
+                style="color: #d9d4a6; text-decoration: none; font-weight:bold; font-size: larger;
+                position: absolute; right: 0%; top: 0%; margin-top: 0px; vertical-align: top; background-color: #371e17; 
+                padding-right:10px; padding-left: 10px; height: 28px;">
+                Fran&#231;ais
+            </a>
+</header>  
+        <form id="return" method="post" action="index.html" autocomplete="off">
+            <table class="inner" style="width: 60%; margin-left:15%; margin-right:15%;">
+                <tr>
+                    <th width="33%">
+                    <a class="navbar-brand" href="index.html"><img src="images/logoSmall.png" alt="Tissy's Bistro" height=132px 
+                        style="position:relative; top: 0%; left: 0%;"></a>
+                    </th>
+                    <th style="text-align:left; border-bottom: 1px solid gray; padding:5px;" width="67%">
+                        Thank you for your order,
+                        <script>
+                            document.write(window.localStorage.getItem(0));
+                        </script>!
+                    </th>
+                </tr>
+                <tr>
+                    <td style="text-align:center; border: 1px solid gray; padding:5px;" colspan="2">
+                        Your
+                        <script>
+                            document.write(window.localStorage.getItem(1));
+                        </script>
+                        is scheduled for
+                        <script>
+                            document.write(window.localStorage.getItem(2)).slice(1, window.localStorage.getItem(2).length);
+                        </script>
+                        at
+                        <script>
+                            document.write(window.localStorage.getItem(3));
+                        </script>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <th colspan = "2";
+                    style="text-decoration: underline; text-align: center; padding: 10px; color:#371e17;"> 
+                        Order Summary 
+                    </th>
+                </tr>
+                    <tr>
+                        <td>
+                            Subtotal:
+                            <br>
+                            Promo:
+                            <br>
+                            GST:
+                            <br>
+                            PST/QST:
+                            <br>
+                            Tip:
+                            <hr>
+                            Total:
+                        </td>
+                        <td style="text-align: center;">
+                            <script>
+                                document.write(window.localStorage.getItem(5));
+                            </script>
+                            <br>
+                            <script>
+                                document.write(window.localStorage.getItem(6));
+                            </script>
+                            <br>
+                            <script>
+                                document.write(window.localStorage.getItem(7));
+                            </script>
+                            <br>
+                            <script>
+                                document.write(window.localStorage.getItem(8));
+                            </script>
+                            <br>
+                            <script>
+                                document.write("$" + window.localStorage.getItem(9));
+                            </script>
+                            <hr>
+                            <script>
+                                document.write("$" + window.localStorage.getItem(10));
+                            </script>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2">
+                            <script>
+                                function home(){
+                                    location.href = "index.html";
+                                }
+                            </script>
+                            <input type="button" value="Return Home" id="order" style=" width: 50%; margin-left: 25%; margin-right: 25%; 
+                            padding-left: 5%; padding-right: 5%; margin-top: 40px;
+                            color:#371e17; border-color:#371e17; border-radius: 10px; border-width: 1px; background-color: #ffcbd3b7;"
+                            onclick="home();">
+                        </td>
+                    </tr>
+                    
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
